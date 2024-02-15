@@ -4,7 +4,7 @@
   <p style="color: red;"><%= message %></p>
 <% end %>
 
-<form action="/movies" method="post" data-turbo="false">
+<form action="<%= movies_path %>" method="post" data-turbo="false">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
   <div>
