@@ -6,15 +6,15 @@
 
 <%= form_with(url: movies_path, data: { turbo: false }) do %>
   <div>
-    <%= label_tag :title_box, "Title" %>
-    <%= text_field_tag :query_title, @the_movie.title, { id: "title_box" } %>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @the_movie.title %>
 
   </div>
 
   <div>
-    <%= label_tag :description_box, "Description" %>
+    <%= label_tag :description %>
 
-    <%= text_area_tag :query_description, @the_movie.description, { id: "description_box", rows: 3 } %>
+    <%= text_area_tag :description, @the_movie.description, { rows: 3 } %>
   </div>
 
   <%= button_tag "Create Movie" %>
