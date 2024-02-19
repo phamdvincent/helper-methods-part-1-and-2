@@ -12,16 +12,12 @@
   </div>
 
   <div>
-    <label for="description_box">
-      Description
-    </label>
+    <%= label_tag :description_box, "Description" %>
 
-    <textarea id="description_box" name="query_description" rows="3"><%= @the_movie.description %></textarea>
+    <%= text_area_tag :query_description, @the_movie.description, { id: "description_box", rows: 3 } %>
   </div>
 
-  <button>
-    Create Movie
-  </button>
+  <%= button_tag "Create Movie" %>
 <% end %>
 
 <form action="<%= movies_path %>" method="post" data-turbo="false">
